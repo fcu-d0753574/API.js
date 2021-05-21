@@ -1,0 +1,96 @@
+"JSpell":{
+    "elements": [{
+        "id": int
+        "errors": [{
+            "suggestions": string array
+            "position": int
+            "word": string
+        }]
+    }],
+    "spellingErrorCount": snt
+}
+
+/********************************************************/
+
+"GrammarBot":{
+    "matches": [	json array
+        {
+            "sentence": string
+            "offset": int
+            "shortMessage": string
+            "length": int
+            "context": {
+                "offset": int
+                "length": int
+                "text": string
+            },
+            "rule": {
+                "issueType": string
+                "description": string
+                "id": string
+                "category": {
+                    "name": string
+                    "id": string
+                }
+            },
+            "replacements": [	json array
+                {"value": string},
+                {"value": string}
+            ],
+            "message": string
+            "type": {
+            	"typeName": string
+            }
+        }
+    ]
+}
+
+/********************************************************/
+
+"TextGear":{
+    "response": {
+        "result": boolean
+        "errors": [		json array
+            {
+                "better": string array
+                "offset": ing
+                "bad": string
+                "length": int
+                "description": {"en": string},
+                "id": string
+                "type": string
+            }
+        ]
+    },
+    "status": boolean
+}
+
+/********************************************************/
+
+"WebSpellChecker_Grammar":[
+	{
+	    "sentence": string
+	    "matches": [	json array
+	        {
+	            "offset": int
+	            "length": int
+	            "rule": {
+	                "id": string
+	                "category": string
+	            },
+	            "suggestions": string array
+	            "message": string
+	        }
+	    ]
+	}
+]
+
+/********************************************************/
+
+"WebSpellChecker_Spell":[
+	{
+	    "suggestions": string array
+	    "word": string
+	    "ud": boolean
+	}
+]
